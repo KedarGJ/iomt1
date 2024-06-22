@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Itodo } from './shared/models/todo.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'iomt1';
+  todoArray : Array<Itodo> = [
+  //   {
+  //   todoItem:"JS"
+  // }
+]
+
+  getTodos(todo : Itodo){
+    this.todoArray.unshift(todo)
+  }
 }
